@@ -1,0 +1,60 @@
+\documentclass[lang=cn,10pt]{GorgeousnBook}
+
+\title{Leonardo的ACM模板}
+\subtitle{模板用的好，金牌少不了}
+
+\author{列奥那多是勇者}
+\institute{狗头吧}
+\date{\today}
+\version{$0.0.1$}
+\bioinfo{邮箱}{azraelzarkli@gmail.com}
+
+\extrainfo{狗头吧在什么时候都是acmer最好的救济}
+
+\setcounter{tocdepth}{3}
+
+\logo{avatar_bust.png}
+\cover{cover.jpg}
+
+% % 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+% % 修改标题页的橙色带
+\definecolor{customcolor}{RGB}{245, 250, 246}
+\colorlet{coverlinecolor}{customcolor}
+\usepackage{zhlipsum}
+\usepackage{longtable}
+
+
+\begin{document}
+
+\chapterimage{catalog.png}
+\maketitle
+
+\frontmatter
+\thispagestyle{fancy}
+\tableofcontents
+
+\mainmatter
+\partsimage{part_0.png}
+\part{数据结构}
+\input{chapter/0_data_structure.tex}
+
+\newif\ifshowLink % 是否显示题目链接的变量
+\showLinktrue % 电子版最好设为true显示，打印版本应当设为false
+% \showLinkfalse
+
+\partsimage{part_1.png}
+\part{基础算法}
+\input{chapter/1_basic_algo.tex}
+
+
+
+
+
+\partsimage{part_3.png}
+\part{附录}
+\input{chapter/appendix.tex}
+
+\end{document}

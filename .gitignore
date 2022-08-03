@@ -1,0 +1,9 @@
+*.aux
+*.bcf
+*.listing
+*.log
+*.out
+*.ptc
+*.run.xml
+*.synctex.gz
+*.toc
