@@ -26,11 +26,16 @@
 \usepackage{zhlipsum}
 \usepackage{longtable}
 
+\newif\ifshowLink % 是否显示题目链接的变量
+\showLinktrue % 电子版最好设为true显示，打印版本应当设为false
+% \showLinkfalse
 
 \begin{document}
 
+
 \chapterimage{catalog.png}
 \maketitle
+    \input{chapter/prologue.tex}
 
 \frontmatter
 \thispagestyle{fancy}
@@ -38,18 +43,21 @@
 
 \mainmatter
 \partsimage{part_0.png}
-\part{数据结构}
-\input{chapter/0_data_structure.tex}
+\part{STL}
+\input{chapter/0_stl.tex}
 
-\newif\ifshowLink % 是否显示题目链接的变量
-\showLinktrue % 电子版最好设为true显示，打印版本应当设为false
-% \showLinkfalse
+\partsimage{part_6.png}
+\part{数据结构}
+\input{chapter/1_data_structure.tex}
 
 \partsimage{part_1.png}
 \part{基础算法}
-\input{chapter/1_basic_algo.tex}
+\input{chapter/2_basic_algo.tex}
 
-
+\partsimage{part_4.png}
+\part{进阶算法}
+\input{chapter/3_graph.tex}
+% \input{chapter/2_graph.tex} 进阶部分比较多，每章分开来
 
 
 

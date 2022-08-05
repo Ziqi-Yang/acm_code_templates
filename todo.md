@@ -1,0 +1,4 @@
+- [ ] 文档附录附上latex模板github地址和p站图片链接
+- [ ] add vim config 
+- [ ] c++注意事项章节
+- [ ] 拓扑排序
