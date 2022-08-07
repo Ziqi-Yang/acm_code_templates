@@ -9,4 +9,6 @@ c.resize(2, vector<int>(2)); // 分配二维空间
 c.empty(); c.size(); c.clear();
 a.emplace_back(1, 2);
 a.pop_back();
-a.begin(); a.end(); a.rbegin(); a.rend();
+a.insert(a.begin(), {1,2}); // can insert multiple elements
+a.begin(); a.end(); a.rbegin(); a.rend(); // iterator
+a.front(); a.back(); // reference

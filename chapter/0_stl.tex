@@ -6,13 +6,63 @@
 \end{center}
 
 \section{pair}
+std::pair 是标准库中定义的一个类模板。用于将两个变量关联在一起，组成一个“对”，而且两个变量的数据类型可以是不同的。
 \lstinputlisting[style=cpp]{code/stl/pair.cpp}
 
 \section{vector}
+std::vector 是 STL 提供的 内存连续的、可变长度 的数组（亦称列表）数据结构。能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问。
 \lstinputlisting[style=cpp]{code/stl/vector.cpp}
 
-\section{set}
+\section{array}
+std::array 是 STL 提供的 内存连续的、固定长度 的数组数据结构。其本质是对原生数组的直接封装。
+\lstinputlisting[style=cpp]{code/stl/array.cpp}
+
+\section{deque}
+std::deque 是 STL 提供的 双端队列 数据结构。能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问。
+\lstinputlisting[style=cpp]{code/stl/deque.cpp}
+
+\section{list}
+std::list 是 STL 提供的 双向链表 数据结构。能够提供线性复杂度的随机访问，以及常数复杂度的插入和删除。
+
+list 的使用方法与 deque 基本相同，但是增删操作和访问的复杂度不同。此处列下特殊的(下列函数list提供了特别的实现以供使用):
+\lstinputlisting[style=cpp]{code/stl/list.cpp}
+
+\section{set / unordered\_set}
+关于 unordered\_set 的哈希冲突，使用自定义哈希函数可以有效避免构造数据产生的大量哈希冲突，代码实现见本册附录。
+
+set 是关联容器，含有键值类型对象的已排序集，搜索、移除和插入拥有对数复杂度。set 内部通常采用红黑树实现。平衡二叉树的特性使得 set 非常适合处理需要同时兼顾查找、插入与删除的情况。\\
+和数学中的集合相似，set 中不会出现值相同的元素。如果需要有相同元素的集合，需要使用 multiset。multiset 的使用方法与 set 的使用方法基本相同。(当然也有unordered\_multiset)
 \lstinputlisting[style=cpp]{code/stl/set.cpp}
 
+\section{map / unordered\_map}
+关于 unordered\_map 的哈希冲突，使用自定义哈希函数可以有效避免构造数据产生的大量哈希冲突，代码实现见本册附录。
+
+map 是有序键值对容器，它的元素的键是唯一的。搜索、移除和插入操作拥有对数复杂度。map 通常实现为红黑树。multimap则允许有重复的Key值。(当然也有 unordered\_multimap)
+\lstinputlisting[style=cpp]{code/stl/map.cpp}
+
 \section{string}
+std::string 是在标准库 <string>（注意不是 C 语言中的 <string.h> 库）中提供的一个类，本质上是 std::basic\_string<char> 的别称。
+
 \lstinputlisting[style=cpp]{code/stl/string.cpp}
+
+\section{stack}
+STL 栈 (std::stack) 是一种后进先出 (Last In, First Out) 的容器适配器，仅支持查询或删除最后一个加入的元素（栈顶元素），不支持随机访问，且为了保证数据的严格有序性，不支持迭代器。
+\lstinputlisting[style=cpp]{code/stl/stack.cpp}
+
+\section{queue}
+STL 队列 (std::queue) 是一种先进先出 (First In, First Out) 的容器适配器，仅支持查询或删除第一个加入的元素（队首元素），不支持随机访问，且为了保证数据的严格有序性，不支持迭代器。
+\lstinputlisting[style=cpp]{code/stl/queue.cpp}
+
+\section{qriority\_queue}
+默认容器为vector, 默认算子为 less, 也就是最大堆
+\lstinputlisting[style=cpp]{code/stl/priority_queue.cpp}
+
+
+\section{bitset}
+std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格来讲，它并不属于 STL。
+\lstinputlisting[style=cpp]{code/stl/bitset.cpp}
+
+\section{algorithm}
+\subsection{min / max}
+
+% cmath

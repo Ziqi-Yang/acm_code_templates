@@ -1,5 +1,6 @@
 #include <string>
 string a = "abcdef123456";
+string b(2, '2'); // 22;
 printf("%s\n", a.c_str()); // for printf
 a.length(); // a.size();
 a.find('c'); // return position number, unfind: -1

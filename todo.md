@@ -1,4 +1,6 @@
 - [ ] 文档附录附上latex模板github地址和p站图片链接
 - [ ] add vim config 
 - [ ] c++注意事项章节
-- [ ] 拓扑排序
+- [ ] 拓扑排序完善
+- [ ] acwing binary_search template
+- [ ] https://www.acwing.com/activity/content/problem/content/7344/ 学y总手写哈希表

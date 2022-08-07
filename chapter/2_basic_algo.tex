@@ -1,17 +1,15 @@
 \chapterimage{chapter_4.png}
-\chapter{排序算法}
+\chapter{基础算法}
 
 \begin{center}
     \pgfornament[width=0.36\linewidth,color=lsp]{88}
 \end{center}
 
-
-\section{快速排序}
-
+\section{排序算法}
+\subsection{快速排序}
 \lstinputlisting[style=cpp]{code/basic/sort/quick_sort.cpp}
 
-\section{归并排序}
-
+\subsection{归并排序}
 \lstinputlisting[style=cpp]{code/basic/sort/merge_sort.cpp}
 
 \ifshowLink
@@ -21,5 +19,29 @@
     \end{enumerate}
 \fi
 
-\chapterimage{chapter_1.png}
-\chapter{双指针算法}
+\section{二分}
+\subsection{整数二分}
+\lstinputlisting[style=cpp]{code/basic/binary_search/int.cpp}
+
+\subsection{浮点数二分}
+\lstinputlisting[style=cpp]{code/basic/binary_search/float.cpp}
+
+\ifshowLink
+相关题目：
+    \begin{enumerate}
+        \item AcWing 790. 数的三次方根: \href{https://www.acwing.com/activity/content/problem/content/824/}{https://www.acwing.com/activity/content/problem/content/824/}
+    \end{enumerate}
+\fi
+
+\section{高精度}
+也就是数比较大，不能放在通常的类型中的时候(像python, java 这类的语言本身就实现了这类性质)
+\subsection{加法}
+\lstinputlisting[style=cpp]{code/basic/high_eps/add.cpp}
+\subsection{减法}
+\lstinputlisting[style=cpp]{code/basic/high_eps/sub.cpp}
+\subsection{乘法}
+高精度乘低精度 如 10000位的乘以一个大小为100的
+\lstinputlisting[style=cpp]{code/basic/high_eps/multiply.cpp}
+\subsection{除法}
+高精度除以低精度 如 10000位的除以一个大小为100的
+\lstinputlisting[style=cpp]{code/basic/high_eps/div.cpp}

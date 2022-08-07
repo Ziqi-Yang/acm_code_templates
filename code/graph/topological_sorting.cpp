@@ -9,7 +9,7 @@ public:
     vector<int> q;
     vector<int> res; // 拓扑排序
 
-    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) { // numCourses: 所有的课程数目（也就是生成的graph.size())
         vector<vector<int>> graph;
         graph.resize(numCourses);
         for (auto &v: prerequisites)
