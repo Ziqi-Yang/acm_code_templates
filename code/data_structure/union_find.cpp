@@ -1,45 +1,23 @@
-// https://labuladong.github.io/algo/2/22/53/
-class union_find
-{
-private:
-	int parent[1010]; // to be changed
-	int size;
-
-public:
-	int count;
-
-	union_find(int n)
-	{
-		size = n;
-		count = n; // not connected at the beginning
-		for (int i = 0; i < n; i++) parent[i] = i;
-	}
-
-	// int count() // the number of connected parts
-		// return this.count;
-
-	int find(int x)
-	{ // basic func for implementing other functions
-		assert(x < size);
-		if (parent[x] != x) parent[x] = find(parent[x]);
-		return parent[x];
-	}
-
-	void union_parts(int p, int q)
-	{ // * connect two parts
-		assert(p < size || q < size);
-		int rootP = find(p);
-		int rootQ = find(q);
-		if (rootP == rootQ) return;
-		parent[rootQ] = rootP; // rootP is the parent
-		count--;
-	}
-
-	bool connected(int p, int q)
-	{ // * whether p and q are in the same part
-		assert(p < size || q < size);
-		int rootP = find(p);
-		int rootQ = find(q);
-		return rootP == rootQ;
-	}
+// https://codeforces.com/contest/1691/submission/159022997
+// 自己改进版本：加入cnt变量表示有几组，查询时间复杂度 O(1)
+struct DSU {
+    std::vector<int> f, siz;
+	int cnt;
+    DSU(int n) : f(n), siz(n, 1) { std::iota(f.begin(), f.end(), 0); cnt = n;} // f记录parent
+    int leader(int x) { // to implement other funcs
+        while (x != f[x]) x = f[x] = f[f[x]];
+        return x;
+    }
+    bool same(int x, int y) { return leader(x) == leader(y); } // 是否一组
+    bool merge(int x, int y) { // 合并
+        x = leader(x);
+        y = leader(y);
+        if (x == y) return false;
+        siz[x] += siz[y];
+        f[y] = x;
+		cnt --;
+        return true;
+    }
+    int size(int x) { return siz[leader(x)]; } // 一组多少个元素
+	int count() {return cnt;} // 几组
 };

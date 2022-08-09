@@ -1,5 +1,11 @@
 - [ ] 文档附录附上latex模板github地址和p站图片链接
-- [ ] add vim config 
+- [ ] add vim config 以及 vim 正则表达式(latex变量控制显示)
+- [ ] stl 库内数据结构操作的时间复杂度表格
+- [ ] stl 补充全常见/不常见操作(比如swap)
+- [ ] stl forward_list
+- [ ] unordered_set 哈希冲突 补充
+  [知乎-unordered_map的小trick](https://zhuanlan.zhihu.com/p/500065935?utm_campaign=shareopn&utm_medium=social&utm_oi=990161376802910208&utm_psn=1539956732297601024&utm_source=wechat_session)
+    再看看如何产生数据产生哈希冲突
 - [ ] c++注意事项章节
 - [ ] 拓扑排序完善
 - [ ] acwing binary_search template

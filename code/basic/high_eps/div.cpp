@@ -1,4 +1,4 @@
-// A / b = C ... r, A >= 0, b > 0
+// A / b = C ... r, A >= 0, b > 0 注意余数r是引用类型, 随便传一个变量即可
 // 所有都是数的低位放在数组前面的
 vector<int> div(vector<int> &A, int b, int &r)
 {

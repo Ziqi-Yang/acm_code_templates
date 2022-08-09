@@ -5,18 +5,19 @@
     \pgfornament[width=0.36\linewidth,color=lsp]{88}
 \end{center}
 
-\section{并查集 union find}
-
+\section{并查集 DSU/UF}
+\textbf{DSU}: Disjoint Set Union; \textbf{UF}: Union Find
 并查集是一种树形的数据结构，顾名思义，它用于处理一些不交集的 合并 及 查询 问题。 它支持两种操作： 
 
 \begin{itemize}
-    \item 查找（Find）：确定某个元素处于哪个子集；
     \item 合并（Union）：将两个子集合并成一个集合。
+    \item 查找（Find）：确定某个元素处于哪个子集；
 \end{itemize}
 
 \lstinputlisting[style=cpp]{code/data_structure/union_find.cpp}
 
 \ifshowLink
+讲解: \href{https://labuladong.github.io/algo/2/22/53/}{https://labuladong.github.io/algo/2/22/53/}\\
 相关题目：
     \begin{enumerate}
         \item LeetCode 990. Satisfiability of Equality Equations: \href{https://leetcode.cn/problems/satisfiability-of-equality-equations/}{https://leetcode.cn/problems/satisfiability-of-equality-equations/}
