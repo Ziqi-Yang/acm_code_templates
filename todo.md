@@ -10,3 +10,4 @@
 - [ ] 拓扑排序完善
 - [ ] acwing binary_search template
 - [ ] https://www.acwing.com/activity/content/problem/content/7344/ 学y总手写哈希表
+- [ ] 最长递增子序列 O(nlogn) 解法： https://labuladong.github.io/algo/3/26/76/

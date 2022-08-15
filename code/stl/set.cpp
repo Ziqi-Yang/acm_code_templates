@@ -1,7 +1,8 @@
 #include <set>
 // elements in set are sorted accendingly, usually implemented by red-black tree;
-set<int> a {1,7, 3, 2};
-a.insert(4); a.count(10); a.empty(); a.size();
+set<int> a {1, 2, 3, 7}, b{1, 5, 6};
+a.insert(4); a.count(10); a.empty(); a.size(); a.erase(7);
+a.merge(b); // c++17 => a: {1,2,3,5,6,7}; b: {1};
 a.find(7); // iterator
 a.upper_bound(3); // <= 3, iterator
 a.lower_bound(2); // >= 2, iterator

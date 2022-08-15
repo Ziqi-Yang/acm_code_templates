@@ -1,4 +1,9 @@
 #pragma GCC optimize(3) // O3
+
+// #define FMT_HEADER_ONLY // comment 线上比赛调试的时候可以用下
+// #include <fmt/ranges.h> // comment 不过提交的时候记得注释掉
+// #define pp(v) fmt::print("{}\n", v) // comment
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -20,7 +25,7 @@ void solve(int tcase){
 }
 
 int main(int argc, char *argv[]) {
-    ios::sync_with_stdio(false);cin.tie(0);
+    ios::sync_with_stdio(false);cin.tie(nullptr);
 
     int T;
     cin >> T;
