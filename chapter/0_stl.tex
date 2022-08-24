@@ -5,6 +5,10 @@
     \pgfornament[width=0.36\linewidth,color=lsp]{88}
 \end{center}
 
+\begin{mybox1}
+\textbf{备注}： 以c++14为标准
+\end{mybox1}
+
 \section{pair}
 std::pair 是标准库中定义的一个类模板。用于将两个变量关联在一起，组成一个“对”，而且两个变量的数据类型可以是不同的。
 \lstinputlisting[style=cpp]{code/stl/pair.cpp}
@@ -63,11 +67,71 @@ std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格
 \lstinputlisting[style=cpp]{code/stl/bitset.cpp}
 
 \section{iterator}
-% distance
+\lstinputlisting[style=cpp]{code/stl/iterator.cpp}
 
 \section{algorithm}
-% partition partition_point
+
+\subsection{Non-modifying sequence operations}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Non-modifying sequence operations}
+    \renewcommand\arraystretch{1.3}
+    \begin{tabular}{|l|l|}
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{all\_of} \hword{any\_of} \hword{none\_of} & checks if a predicate is \textbf{true} for all, any or none of the elements in a range \\ \hline
+        \hword{for\_each} & 	applies a function to a range of elements \\ \hline
+        \hword{count} \hword{count\_if} & returns the number of elements satisfying specific criteria \\ \hline
+        \hword{mismatch} & finds the first position where two ranges differ \\ \hline
+        \hword{find} \hword{find\_if} \hword{find\_if\_not} & 	finds the first element satisfying specific criteria \\ \hline
+        \hword{find\_end} &  finds the last sequence of elements in a certain range \\ \hline
+        \hword{find\_first\_of} & searches for any one of a set of elements \\ \hline
+        \hword{adjacent\_find} & finds the first two adjacent items that are equal (or satisfy a given predicate) \\ \hline
+        \hword{search} & searches for a range of elements \\ \hline
+        \hword{search\_n} & searches a range for a number of consecutive copies of an element \\ \hline
+    \end{tabular}
+\end{table}
+
+\lstinputlisting[style=cpp]{code/stl/algorithm/non-modifying.cpp}
+
+\subsection{Modifying sequence operations}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    % \renewcommand\arraystretch{1.3}
+    % \begin{tabular}{|l|l|}
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{copy} \hword{copy\_if} & copies a range of elements to a new location \\ \hline
+        \hword{copy\_n} & copies a number of elements to a new location \\ \hline
+        \hword{copy\_backward} & copies a range of elements in backwards order \\ \hline
+        \hword{move} & moves a range of elements to a new location \\ \hline
+        \hword{move\_backward} & moves a range of elements to a new location in backwards order \\ \hline
+        \hword{fill} & copy-assigns the given value to every element in a range \\ \hline
+        \hword{fill\_n} & copy-assigns the given value to N elements in a range \\ \hline
+        \hword{transform} & assigns the results of successive function calls to every element in a range \\ \hline
+        \hword{generate} & assigns the results of successive function calls to every element in a range \\ \hline
+        \hword{generate\_n} & assigns the results of successive function calls to N elements in a range \\ \hline
+        \hword{remove} \hword{remove\_if} & removes elements satisfying specific criteria \\ \hline
+        \hword{remove\_copy} \hword{remove\_copy\_if} & copies a range of elements omitting those that satisfy specific criteria \\ \hline
+        \hword{replace} \hword{replace\_if} & replaces all values satisfying specific criteria with another value \\ \hline
+        \hword{replace\_copy} \hword{replace\_copy\_if} & copies a range, replacing elements satisfying specific criteria with another value \\ \hline
+        \hword{swap} & swaps the values of two objects \\ \hline
+        \hword{swap\_ranges} & swaps two ranges of elements \\ \hline
+        \hword{iter\_swap} & swaps the elements pointed to by two iterators \\ \hline
+        \hword{reverse} & reverses the order of elements in a range \\ \hline
+        \hword{reverse\_copy} & creates a copy of a range that is reversed \\ \hline
+        \hword{rotate} & rotates the order of elements in a range \\ \hline
+        \hword{rotate\_copy} & copies and rotate a range of elements \\ \hline
+        \hword{shuffle} & randomly re-orders elements in a range \\ \hline
+        \hword{unique} & removes consecutive duplicate elements in a range \\ \hline
+        \hword{unique\_copy} & creates a copy of some range of elements that contains no consecutive duplicates \\ \hline
+    % \end{tabular}
+\end{longtable}
+\end{center}
 
 
-
+% \section{numeric}
 % cmath

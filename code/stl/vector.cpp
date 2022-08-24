@@ -8,7 +8,7 @@ vector<vector<int>> c{vector<int>{1,2}};
 vector<vector<int>> e(10,vector<int>(10));
 c.resize(2, vector<int>(2)); // 分配二维空间
 c.empty(); c.size(); c.clear();
-c.erase(a.begin() + 1);
+c.erase(c.begin() + 1); c.erase(c.begin(), c.end());
 a.emplace_back(1, 2);
 a.swap(d);
 a.pop_back();
