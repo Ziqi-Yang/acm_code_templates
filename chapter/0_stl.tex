@@ -134,23 +134,148 @@ std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格
 
 \subsection{Partitioning operations}
 
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{is\_partitioned} & determines if the range is partitioned by the given predicate \\ \hline
+        \hword{partition} & divides a range of elements into two groups \\ \hline
+        \hword{partition\_copy} & copies a range dividing the elements into two groups \\ \hline
+        \hword{stable\_partition} & divides elements into two groups while preserving their relative order \\ \hline
+        \hword{partition\_point} & locates the partition point of a partitioned range \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Sorting operations}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{is\_sorted} & checks whether a range is sorted into ascending order \\ \hline
+        \hword{is\_sorted\_until} & finds the largest sorted subrange \\ \hline
+        \hword{sort} & sorts a range into ascending order \\ \hline
+        \hword{partial\_sort} & sorts the first N elements of a range \\ \hline
+        \hword{partial\_sort\_copy} & copies and partially sorts a range of elements \\ \hline
+        \hword{stable\_sort} & sorts a range of elements while preserving order between equal elements \\ \hline
+        \hword{nth\_element} & partially sorts the given range making sure that it is partitioned by the given element \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Binary search operations (on sorted ranges)}
 
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{lower\_bound} & returns an iterator to the first element not less than the given value \\ \hline
+        \hword{upper\_bound} & returns an iterator to the first element greater than a certain value \\ \hline
+        \hword{binary\_search} & determines if an element exists in a partially-ordered range \\ \hline
+        \hword{equal\_range} & returns range of elements matching a specific key \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Other operations on sorted ranges}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{merge} & merges two sorted ranges \\ \hline
+        \hword{inplace\_merge} & merges two ordered ranges in-place \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Set operations (on sorted ranges)}
 
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{includes} & returns true if one sequence is a subsequence of another \\ \hline
+        \hword{set\_difference} & computes the difference between two sets \\ \hline
+        \hword{set\_intersection} & computes the intersection of two sets \\ \hline
+        \hword{set\_symmetric\_difference} & computes the symmetric difference between two sets \\ \hline
+        \hword{set\_union} & computes the union of two sets \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Heap operations}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{is\_heap} & checks if the given range is a max heap \\ \hline
+        \hword{is\_heap\_until} & finds the largest subrange that is a max heap \\ \hline
+        \hword{make\_heap} & creates a max heap out of a range of elements \\ \hline
+        \hword{push\_heap} & adds an element to a max heap \\ \hline
+        \hword{pop\_heap} & removes the largest element from a max heap \\ \hline
+        \hword{sort\_heap} & turns a max heap into a range of elements sorted in ascending order \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Minimum/maximum operations}
 
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{max} & returns the greater of the given values \\ \hline
+        \hword{max\_element} & returns the largest element in a range \\ \hline
+        \hword{min} & returns the smaller of the given values \\ \hline
+        \hword{min\_element} & returns the smallest element in a range \\ \hline
+        \hword{minmax} & returns the smaller and larger of two elements \\ \hline
+        \hword{minmax\_element} & returns the smallest and the largest elements in a range \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Comparison operations}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{equal} & determines if two sets of elements are the same \\ \hline
+        \hword{lexicographical\_compare} & returns true if one range is lexicographically less than another \\ \hline
+\end{longtable}
+\end{center}
 
 \subsection{Permutation operations}
 
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{is\_permutation} & determines if a sequence is a permutation of another sequence \\ \hline
+        \hword{next\_permutation} & generates the next greater lexicographic permutation of a range of elements \\ \hline
+        \hword{prev\_permutation} & generates the next smaller lexicographic permutation of a range of elements \\ \hline
+\end{longtable}
+\end{center}
+
 \subsection{Numeric operations}
+
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Modifying sequence operations} \\
+    \hline
+        \textbf{operations} & \textbf{ functions } \\ \hline
+        \hword{iota} & fills a range with successive increments of the starting value \\ \hline
+        \hword{accumulate} & sums up a range of elements \\ \hline
+        \hword{inner\_product} & computes the inner product of two ranges of elements \\ \hline
+        \hword{adjacent\_difference} & computes the differences between adjacent elements in a range \\ \hline
+        \hword{partial\_sum} & computes the partial sum of a range of elements \\ \hline
+\end{longtable}
+\end{center}
 
 % \subsection{Operations on uninitialized memory}
 
