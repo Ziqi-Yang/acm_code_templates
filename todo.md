@@ -1,6 +1,7 @@
 - [ ] 文档附录附上latex模板github地址和p站图片链接
+- [ ] chapter 的图片加上魔女之旅的图片
 - [ ] add vim config 以及 vim 正则表达式(latex变量控制显示)
-- [ ] stl 库内数据结构操作的时间复杂度表格
+- [x] stl 库内数据结构操作的时间复杂度表格
 - [ ] stl 补充全常见/不常见操作(比如swap)
 - [ ] stl forward_list
 - [ ] unordered_set 哈希冲突 补充
@@ -8,6 +9,6 @@
     再看看如何产生数据产生哈希冲突
 - [ ] c++注意事项章节
 - [ ] 拓扑排序完善
-- [ ] acwing binary_search template
+- [x] acwing binary_search template
 - [ ] https://www.acwing.com/activity/content/problem/content/7344/ 学y总手写哈希表
 - [ ] 最长递增子序列 O(nlogn) 解法： https://labuladong.github.io/algo/3/26/76/

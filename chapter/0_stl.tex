@@ -57,7 +57,7 @@ STL 栈 (std::stack) 是一种后进先出 (Last In, First Out) 的容器适配�
 STL 队列 (std::queue) 是一种先进先出 (First In, First Out) 的容器适配器，仅支持查询或删除第一个加入的元素（队首元素），不支持随机访问，且为了保证数据的严格有序性，不支持迭代器。
 \lstinputlisting[style=cpp]{code/stl/queue.cpp}
 
-\section{qriority\_queue}
+\section{priority\_queue}
 默认容器为vector, 默认算子为 less, 也就是最大堆
 \lstinputlisting[style=cpp]{code/stl/priority_queue.cpp}
 
@@ -73,11 +73,9 @@ std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格
 
 \subsection{Non-modifying sequence operations}
 
-\begin{table}[!ht]
-    \centering
-    \caption{Non-modifying sequence operations}
-    \renewcommand\arraystretch{1.3}
-    \begin{tabular}{|l|l|}
+\begin{center}
+\begin{longtable}{ll}
+    \caption{Non-modifying sequence operations} \\
     \hline
         \textbf{operations} & \textbf{ functions } \\ \hline
         \hword{all\_of} \hword{any\_of} \hword{none\_of} & checks if a predicate is \textbf{true} for all, any or none of the elements in a range \\ \hline
@@ -90,8 +88,8 @@ std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格
         \hword{adjacent\_find} & finds the first two adjacent items that are equal (or satisfy a given predicate) \\ \hline
         \hword{search} & searches for a range of elements \\ \hline
         \hword{search\_n} & searches a range for a number of consecutive copies of an element \\ \hline
-    \end{tabular}
-\end{table}
+\end{longtable}
+\end{center}
 
 \lstinputlisting[style=cpp]{code/stl/algorithm/non-modifying.cpp}
 
@@ -131,6 +129,30 @@ std::bitset 是标准库中的一个存储 0/1 的大小不可变容器。严格
     % \end{tabular}
 \end{longtable}
 \end{center}
+
+\lstinputlisting[style=cpp]{code/stl/algorithm/modifying.cpp}
+
+\subsection{Partitioning operations}
+
+\subsection{Sorting operations}
+
+\subsection{Binary search operations (on sorted ranges)}
+
+\subsection{Other operations on sorted ranges}
+
+\subsection{Set operations (on sorted ranges)}
+
+\subsection{Heap operations}
+
+\subsection{Minimum/maximum operations}
+
+\subsection{Comparison operations}
+
+\subsection{Permutation operations}
+
+\subsection{Numeric operations}
+
+% \subsection{Operations on uninitialized memory}
 
 
 % \section{numeric}
